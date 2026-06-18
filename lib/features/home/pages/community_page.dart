@@ -12,18 +12,21 @@ class CommunityPage extends StatefulWidget {
 }
 
 class _CommunityPageState extends State<CommunityPage> {
+  static final Map<String, List<_CommunityPost>> _communityCache = {};
+
   late final List<_CommunityPost> _posts;
 
   @override
   void initState() {
     super.initState();
-    _posts = [
+    _posts = _communityCache[widget.title] ?? [
       _CommunityPost(
         author: 'system',
         content: 'Welcome to the ${widget.title} community. Share your gratitude and moments here!',
         imageUrl: null,
       ),
     ];
+    _communityCache[widget.title] = _posts;
   }
 
   void _addPost() {

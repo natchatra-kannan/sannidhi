@@ -50,16 +50,6 @@ class ProfileDetailPage extends StatelessWidget {
             Text('Bio', style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
             const SizedBox(height: 12),
             Text(member.bio, style: theme.textTheme.bodyLarge?.copyWith(height: 1.7)),
-            const Spacer(),
-            Center(
-              child: FilledButton.icon(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: const Icon(Icons.arrow_back),
-                label: const Text('Back to team'),
-              ),
-            ),
           ],
         ),
       ),
