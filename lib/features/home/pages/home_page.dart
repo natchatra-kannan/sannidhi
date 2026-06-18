@@ -70,10 +70,10 @@ class HomePage extends StatelessWidget {
             child: GridView.builder(
               itemCount: values.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 16,
-                mainAxisSpacing: 16,
-                childAspectRatio: 1.1,
+                crossAxisCount: 3,
+                crossAxisSpacing: 14,
+                mainAxisSpacing: 14,
+                childAspectRatio: 0.95,
               ),
               itemBuilder: (context, index) {
                 final value = values[index];
